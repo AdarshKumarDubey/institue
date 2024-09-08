@@ -1,0 +1,102 @@
+@import url(./Nav.css);
+/* team */
+
+/* Team Overview Section */
+#team_overview {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    text-align: center;
+}
+
+#team_overview h2 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Team Members Grid */
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Creates a responsive grid */
+    gap: 25px;
+    padding: 0 10px;
+}
+
+/* Flexbox Adjustment for Last Row Centering */
+.team-members:has(.team-member:nth-last-child(-n+2):first-child) {
+    justify-content: center; /* Center the last row if it has 1 or 2 items */
+}
+
+/* Individual Team Member Card */
+.team-member {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+}
+
+/* Image Styles */
+.team-member img {
+    width: 100%;
+    max-width: 200px; /* Keeps images uniform and centered */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    display: block; /* Treats the image as a block-level element */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+/* Hover Effects on Team Member Cards */
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+/* Team Member Text Styles */
+.team-member h3 {
+    margin: 10px 0 8px;
+    font-size: 1.8em;
+    color: #fff;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #team_overview h2 {
+        font-size: 2.2em;
+    }
+    
+    .team-member {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #team_overview h2 {
+        font-size: 1.8em;
+    }
+
+    .team-member {
+        padding: 20px;
+    }
+}

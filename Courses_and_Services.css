@@ -1,0 +1,892 @@
+@import url(./Nav.css);
+/* upsc */
+
+
+
+
+
+/* upsc */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c4c1c1;
+}
+
+#courses-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#courses-heading {
+    color: #333;
+    font-size: 2.2rem; /* Adjusted font size */
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 4px solid transparent;
+}
+
+#courses-heading::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(45deg, #00bcd4, #4caf50);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+#courses-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #eaf2f8;
+    background: linear-gradient(135deg, #f0f4f8, #cce7ff);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#courses-list li {
+    padding: 15px;
+   
+    font-size: 1.6rem; /* Adjusted font size */
+    border-bottom: 1px solid #ddd;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    position: relative;
+    font-weight: 600;
+}
+
+#courses-list li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#courses-list li:hover {
+    background-color: #b3e5fc;
+    border: 1px solid #0288d1;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 900;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#courses-list li:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 136, 209, 0.1); /* Light overlay color */
+    border-radius: 8px;
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    #courses-heading {
+        font-size: 2rem; /* Adjusted font size */
+    }
+    #courses-list li {
+        font-size: 1.4rem; /* Adjusted font size */
+    }
+}
+
+@media (max-width: 992px) {
+    #courses-heading {
+        font-size: 1.9rem; /* Adjusted font size */
+    }
+    #courses-list li {
+        font-size: 1.2rem; /* Adjusted font size */
+    }
+}
+
+@media (max-width: 768px) {
+    #courses-heading {
+        font-size: 1.9rem; /* Adjusted font size */
+    }
+    #courses-list li {
+        font-size: 1.2rem; /* Adjusted font size */
+        padding: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    #courses-heading {
+        font-size: 2.1rem; /* Adjusted font size */
+    }
+    #courses-list li {
+        font-size: 1.2rem; /* Adjusted font size */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    #courses-heading {
+        font-size: 1.7rem; /* Adjusted font size */
+    }
+    #courses-list li {
+        font-size: 1.2rem; /* Adjusted font size */
+        padding: 8px;
+    }
+}
+
+#top_courses {
+    color: #333;
+    font-size: 2.4rem; /* Base font size adjusted */
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 4px solid transparent;
+    transition: all 0.3s ease; /* Transition effect */
+}
+
+#top_courses::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(45deg, #00bcd4, #4caf50);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    transition: all 0.3s ease; /* Transition effect */
+}
+
+#top_courses:hover {
+    color: #0288d1; /* Change text color on hover */
+}
+
+#top_courses:hover::after {
+    width: 100%; /* Expand underline on hover */
+    background: linear-gradient(45deg, #4caf50, #00bcd4); /* Reverse gradient on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    #top_courses {
+        font-size: 2.1rem; /* Adjusted font size */
+    }
+}
+
+@media (max-width: 992px) {
+    #top_courses {
+        font-size: 2rem; /* Adjusted font size */
+    }
+}
+
+@media (max-width: 768px) {
+    #top_courses {
+        font-size: 1.8rem; /* Adjusted font size */
+    }
+}
+
+@media (max-width: 576px) {
+    #top_courses {
+        font-size: 1.7rem; /* Adjusted font size */
+    }
+}
+
+@media (max-width: 360px) {
+    #top_courses {
+        font-size: 1.7rem; /* Adjusted font size */
+    }
+}
+
+
+
+
+/* upsc */
+
+
+/* Global Styles */
+
+
+/* Course Container */
+.course-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Course Image */
+.course-image {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Course Heading */
+.course-container h2 {
+    color: #2a5298;
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Course Description */
+.course-description {
+    margin: 20px 0;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+    background-color: #f0f7ff; /* Light blue background for emphasis */
+    padding: 15px;
+    border-left: 4px solid #2a5298; /* Accent border to highlight the content */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effects */
+}
+
+.course-description:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+
+
+
+/* See More Button */
+.see-more-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2a5298;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.see-more-btn:hover {
+    background-color: #1d3a73;
+    transform: scale(1.05);
+}
+
+/* More Content */
+.more-content {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: #eaf0f9;
+    border-radius: 10px;
+    text-align: left;
+    animation: fadeIn 0.5s ease-in-out;
+    color: #333;
+    line-height: 1.6;
+}
+
+.more-content h3 {
+    color: #2a5298;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.more-content p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .course-container {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .course-description, .more-content {
+        font-size: 15px;
+    }
+
+    .course-container h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 600px) {
+    .course-container {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .see-more-btn {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+    
+    .course-description, .more-content {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-description, .more-content {
+        font-size: 13px;
+    }
+    
+    .course-container h2 {
+        font-size: 24px;
+    }
+}
+
+
+
+/* ugc net */
+
+/* General Styles */
+
+/* Course Section Styles */
+   
+
+
+/* General Styles */
+
+
+/* Specific Styles for UGC NET Section */
+#ugc_net {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#ugc_net:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+#ugc_net .course-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#ugc_net .course-title {
+    font-size: 2em;
+    color: #004080;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+#ugc_net .course-title:hover {
+    color: #003366;
+}
+
+#ugc_net .course-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+#ugc_net .course-image:hover ,img:hover{
+    transform: scale(1.05);
+}
+
+#ugc_net .course-description {
+    font-size: 1.1em;
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+#ugc_net .see-more-btn {
+    background-color: #004080;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+#ugc_net .see-more-btn:hover {
+    background-color: #003366;
+    transform: scale(1.05);
+}
+
+#ugc_net #more-content {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+#ugc_net #more-content h3 {
+    margin-top: 0;
+    color: #004080;
+}
+
+#ugc_net #more-content ul {
+    padding-left: 20px;
+}
+
+#ugc_net #more-content li {
+    margin-bottom: 10px;
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    #ugc_net .course-title {
+        font-size: 1.5em;
+    }
+
+    #ugc_net .see-more-btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #ugc_net .course-title {
+        font-size: 1.2em;
+    }
+
+    #ugc_net .see-more-btn {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}
+
+
+
+/* General Styles */
+
+
+/* UGC NET CSIR Section Styles */
+#ugc_net_csir {
+    background-color: #f4f4f4;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+#ugc_net_csir .course-header {
+    text-align: center;
+    margin-bottom: 1.7rem; /* Increased from 1.5rem */
+}
+
+#ugc_net_csir .course-title {
+    font-size: 2rem; /* Increased from 1.8rem */
+    color: #003366;
+}
+
+#ugc_net_csir .course-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#ugc_net_csir .course-description {
+    font-size: 1.3rem; /* Increased from 1.1rem */
+    margin: 1rem 0;
+    color: #333;
+}
+
+#ugc_net_csir .see-more-btn {
+    display: block;
+    width: 200px;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem; /* Increased from 1rem */
+    transition: background-color 0.3s;
+}
+
+#ugc_net_csir .see-more-btn:hover {
+    background-color: #00509e;
+}
+
+#ugc_net_csir .more-content {
+    display: none;
+    margin-top: 1rem;
+}
+
+#ugc_net_csir .more-content h3 {
+    font-size: 1.7rem; /* Increased from 1.5rem */
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#ugc_net_csir .more-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#ugc_net_csir .more-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #ugc_net_csir .course-title {
+        font-size: 1.7rem; /* Increased from 1.5rem */
+    }
+
+    #ugc_net_csir .see-more-btn {
+        width: 150px;
+        font-size: 1.1rem; /* Increased from 0.9rem */
+    }
+
+    #ugc_net_csir .more-content h3 {
+        font-size: 1.4rem; /* Increased from 1.2rem */
+    }
+
+    #ugc_net_csir .more-content ul {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #ugc_net_csir .course-title {
+        font-size: 1.4rem; /* Increased from 1.2rem */
+    }
+
+    #ugc_net_csir .see-more-btn {
+        width: 120px;
+        font-size: 1rem; /* Increased from 0.8rem */
+    }
+
+    #ugc_net_csir .more-content h3 {
+        font-size: 1.2rem; /* Increased from 1rem */
+    }
+}
+
+/* distance education */
+/* General Styles */
+#distance_education {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.course-title {
+    font-size: 1.8rem;
+    color: #003366;
+}
+
+.course-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-description {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.see-more-btn {
+    display: block;
+    width: 200px;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.see-more-btn:hover {
+    background-color: #00509e;
+    transform: scale(1.05);
+}
+
+.more-content {
+    display: none; /* Initially hidden */
+    margin-top: 1rem;
+}
+
+.more-content h3 {
+    font-size: 1.5rem;
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.more-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.more-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .course-title {
+        font-size: 1.5rem;
+    }
+
+    .see-more-btn {
+        width: 150px;
+        font-size: 0.9rem;
+    }
+
+    .more-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .more-content ul {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-title {
+        font-size: 1.2rem;
+    }
+
+    .see-more-btn {
+        width: 120px;
+        font-size: 0.8rem;
+    }
+
+    .more-content h3 {
+        font-size: 1rem;
+    }
+}
+
+
+img:hover{
+    border:1px solid blue;
+}
+img{
+    border:1px solid rebeccapurple;
+}
+
+
+ /* services section */
+#services_section {
+    padding: 3.6rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(135deg, #007bff, #00c6ff); /* Gradient background */
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#services_section h2 {
+    font-size: 1.8rem; /* Base font size for heading */
+    margin-bottom: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.25rem 0;
+    padding: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for contrast */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.service-content {
+    text-align: left;
+    padding: 0 1rem;
+}
+
+.service-content h3 {
+    font-size: 1.4rem; /* Base font size for subheadings */
+    margin-bottom: 0.75rem;
+    color: #00509e; /* Blue shade for subheadings */
+    font-weight: 600;
+}
+
+.service-content p {
+    font-size: 1rem; /* Base font size for paragraphs */
+    color: #444;
+    line-height: 1.8;
+}
+
+.additional-services {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for a softer look */
+    border-radius: 8px;
+    text-align: left;
+    color: #333;
+}
+
+.additional-services h3 {
+    font-size: 1.3rem; /* Base font size for additional service headings */
+    color: #003366;
+    margin: 1rem  0.25rem;
+    font-weight: 600;
+}
+
+.additional-services p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    
+    color: #555;
+    word-spacing: 0.15rem; 
+
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .service-card {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .service-content {
+        flex: 1;
+        padding-left: 1rem;
+    }
+
+    #services_section h2 {
+        font-size: 2.5rem; /* Larger heading size for tablets */
+    }
+
+    .service-content h3 {
+        font-size: 1.5rem; /* Adjusted subheading size */
+    }
+
+    .service-content p {
+        font-size: 1.1rem; /* Slightly larger paragraph text */
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .service-card {
+        flex-direction: row;
+        text-align: left;
+        margin: 1.25rem auto;
+        padding: 1.25rem 1.5rem;
+    }
+
+    #services_section h2 {
+        font-size: 3rem; /* Larger heading size for desktops */
+    }
+
+    .service-content h3 {
+        font-size: 1.6rem; /* Larger subheading size for desktops */
+    }
+
+    .service-content p {
+        font-size: 1.2rem; /* Larger paragraph text for desktops */
+    }
+}
