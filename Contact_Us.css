@@ -1,0 +1,141 @@
+
+@import url(./Nav.css);
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f6; /* Soft blue-gray for a soothing background */
+    color: #333;
+}
+
+/* Contact Section Specific to contact_information_demo */
+#contact_information_demo {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    border: 2px solid #dae1e7; /* Light border for subtle definition */
+}
+
+#contact_information_demo h2 {
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #1f3a93; /* Bold blue for a modern and professional look */
+    font-weight: 700;
+}
+
+#contact_information_demo .contact-details p {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #444; /* Darker gray for better readability */
+    line-height: 1.6;
+}
+
+#contact_information_demo .contact-details a {
+    color: #1f3a93; /* Matching link color with header */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#contact_information_demo .contact-details a:hover {
+    color: #16a085; /* Teal hover color for links */
+}
+
+.email-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3498db; /* Vivid blue for standout button */
+    color: #fff; /* White text for contrast */
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(52, 152, 219, 0.4); /* Soft blue shadow */
+}
+
+.email-button:hover {
+    background-color: #2980b9; /* Slightly darker blue on hover */
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(41, 128, 185, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #contact_information_demo {
+        padding: 50px 20px;
+    }
+
+    #contact_information_demo h2 {
+        font-size: 32px;
+    }
+
+    #contact_information_demo .contact-details p {
+        font-size: 17px;
+    }
+
+    .email-button {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact_information_demo {
+        padding: 40px 15px;
+    }
+
+    #contact_information_demo h2 {
+        font-size: 28px;
+    }
+
+    #contact_information_demo .contact-details p {
+        font-size: 16px;
+    }
+
+    .email-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact_information_demo {
+        padding: 30px 10px;
+    }
+
+    #contact_information_demo h2 {
+        font-size: 24px;
+    }
+
+    #contact_information_demo .contact-details p {
+        font-size: 14px;
+    }
+
+    .email-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
