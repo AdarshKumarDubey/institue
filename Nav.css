@@ -514,4 +514,71 @@ footer {
       gap: 10px; /* Adjust gap between social icons */
     }
   }
+
+
+
+
+
+  
+/* Fixed Icons (WhatsApp and Call) */
+#fixed-icons {
+    position: fixed;
+    top: 350px; /* Adjusted to 150px from the top */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    z-index: 1000;
+}
+
+#whatsapp-icon, #call-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#whatsapp-icon img, #call-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover Effects */
+#whatsapp-icon:hover, #call-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #fixed-icons {
+        top: 240px;
+        padding: 0 10px;
+    }
+
+    #whatsapp-icon, #call-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    #fixed-icons {
+        top: 160px;
+        padding: 0 8px;
+    }
+
+    #whatsapp-icon, #call-icon {
+        width: 38px;
+        height: 38px;
+    }
+}
+
   
