@@ -1,0 +1,128 @@
+@import url(./Nav.css);
+
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+   
+    color: #fff;
+}
+
+/* Gallery Title */
+#gallery h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Gallery Container */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Increased minimum width */
+    gap: 20px; /* Increased gap for larger images */
+    padding: 0 10px;
+}
+
+/* Gallery Item */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+    position: relative;
+    box-sizing: border-box; /* Ensures border and padding are included in element's dimensions */
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: auto; /* Allow the height to adjust based on the image aspect ratio */
+    max-height: 400px; /* Set a maximum height to prevent images from becoming too large */
+    object-fit: cover; /* Ensure the image covers the container */
+    display: block;
+    border-radius: 10px;
+    border: none; /* No border by default */
+    transition: transform 0.5s ease, border-color 0.3s ease;
+    box-sizing: border-box; /* Ensures border is included in element's dimensions */
+}
+
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    border: 2px solid #ffd700; /* Golden border on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    #gallery h2 {
+        font-size: 2.2em;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    #gallery h2 {
+        font-size: 2em;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusted for small tablets */
+    }
+
+    .gallery-item img {
+        max-height: 300px; /* Adjusted height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #gallery h2 {
+        font-size: 1.8em;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted for mobile */
+    }
+
+    .gallery-item img {
+        max-height: 250px; /* Smaller height for mobile */
+    }
+}
+
+/* Lightbox Styling */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#lightbox:hover img {
+    transform: scale(1.05);
+}
