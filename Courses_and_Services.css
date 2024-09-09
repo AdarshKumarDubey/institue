@@ -12,10 +12,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #c4c1c1;
+    /* background-color: white; */
+    background-color: blueviolet;
 }
 
 #courses-section {
-    background-color: #ffffff;
+    background-color: #f7f0f0;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     max-width: 90%;
@@ -889,4 +891,23 @@ img{
     .service-content p {
         font-size: 1.2rem; /* Larger paragraph text for desktops */
     }
+}
+
+
+/* for whatsapp */
+
+
+
+/* Call Icon Styling */
+#call-icon img,#whatsapp-icon img {
+   
+    border: none; /* Ensure no borders */
+    transition: transform 0.3s; /* Optional: add a smooth transform effect */
+}
+
+/* Add unique hover effects if needed */
+#whatsapp-icon:hover img,
+#call-icon:hover img {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    /* Note: You can add other hover effects here if desired */
 }
