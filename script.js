@@ -211,3 +211,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+function showPopup() {
+    alert('EMAIL IS OPENING');
+}
+
+
