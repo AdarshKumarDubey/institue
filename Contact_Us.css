@@ -155,7 +155,7 @@ body {
 /* enquiry form */
 
 
-
+/* Enquiry Form */
 #contact_me {
     display: flex;
     justify-content: center;
@@ -174,6 +174,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 1s forwards;
+
 
     
 h2 {
@@ -238,9 +239,18 @@ button:hover {
     }
 }
 
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
 
+    input, textarea {
+        font-size: 13px;
+        padding: 12px;
+    }
 
-
-
-
-
+    button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
