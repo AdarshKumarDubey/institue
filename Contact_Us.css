@@ -176,6 +176,9 @@ body {
     animation: fadeIn 1s forwards;
 
 
+
+}
+
     
 h2 {
     text-align: center;
@@ -213,7 +216,6 @@ button {
 
 button:hover {
     background-color: #135ba1;
-}
 }
 
 
