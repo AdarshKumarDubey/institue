@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous"
     referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Contact_Us.css">
@@ -35,13 +35,27 @@
       <section id="contact_information_demo">
         <h2>Contact Information</h2>
         <div class="contact-details">
-            <p><strong>Address:</strong> East Uttam Nagar, Delhi, 110059</p>
-            <p><strong>Phone Number:</strong> <a href="tel:+918178023242">+918178023242</a></p>
-            <p><strong>Email:</strong> <a href="mailto:info@scholarshouse.com" class="email-button">Email Us</a></p>
+            <p><strong>Address:<i class="fa-solid fa-location-dot"></i></strong> East Uttam Nagar, Delhi, 110059</p>
+            <p><strong>Phone Number: <i class="fa-solid fa-phone-volume"></i></strong> <a href="tel:+918178023242">+918178023242</a></p>
+            <p><strong>Email: <i class="fa-solid fa-envelope"></i>  info@scholarshouse.com</strong> <a href="mailto:info@scholarshouse.com" class="email-button" onclick="showPopup()">Click To Mail</a></p>
         </div>
     </section>
  
-    
+    <!-- enquiry form -->
+
+
+    <section id="contact_me">
+        <div class="form-container">
+            <h2>Make an Enquiry</h2>
+            <form id="enquiryForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="text" id="phone" name="phone" placeholder="Your Phone" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
 
 
     
