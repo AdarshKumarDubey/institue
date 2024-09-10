@@ -864,13 +864,6 @@ footer {
   
 
 
-  /* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Fixed Icons (WhatsApp and Call) */
 #fixed-icons {
     position: fixed;
@@ -922,7 +915,7 @@ footer {
 
 @media (max-width: 480px) {
     #fixed-icons {
-        top: 160px;
+        top: 185px;
         padding: 0 8px;
     }
 
