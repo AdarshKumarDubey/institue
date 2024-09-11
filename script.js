@@ -212,8 +212,77 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+//gallery
+
+document.addEventListener('DOMContentLoaded', () => {
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Create lightbox element
+            const lightbox = document.createElement('div');
+            lightbox.id = 'lightbox';
+            document.body.appendChild(lightbox);
+            
+            // Create img element inside lightbox
+            const img = document.createElement('img');
+            img.src = item.src;
+            lightbox.appendChild(img);
+            
+            // Close lightbox on click
+            lightbox.addEventListener('click', () => {
+                lightbox.remove();
+            });
+        });
+    });
+});
+
+
+
+// contact us
+
+
+
 function showPopup() {
     alert('EMAIL IS OPENING');
 }
+
+
+//enquiry form
+
+document.addEventListener("DOMContentLoaded", function () {
+    const formContainer = document.querySelector(".form-container");
+
+    // Simulate dynamic loading effect
+    setTimeout(() => {
+        formContainer.style.opacity = '1';
+        formContainer.style.transform = 'translateY(0)';
+    }, 500);
+    
+    const form = document.getElementById('enquiryForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Form submitted successfully!');
+        form.reset();
+    });
+});
+
+
+//  faq section
+
+function toggleFaq(element) {
+    // Close all open answers
+    const allFaqs = document.querySelectorAll('.faq');
+    allFaqs.forEach(faq => {
+        if (faq !== element.parentElement) {
+            faq.classList.remove('active');
+        }
+    });
+
+    // Toggle the selected FAQ
+    element.parentElement.classList.toggle('active');
+}
+
 
 
