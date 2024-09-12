@@ -17,7 +17,7 @@ header {
     /* background-color: #333; */
     background-color: rgb(182, 64, 182);
     font-weight: 600;
-    line-height: 50px;
+    /* line-height: 50px; */
 
 }
 
@@ -75,10 +75,10 @@ header {
         
 
     }
-    header{
+    /* header{
         line-height: 30px;
 
-    }
+    } */
 }
 @media (max-width: 768px) {
     .nav-links {
@@ -88,15 +88,16 @@ header {
         align-items: center;
         width: 100%;
         position: absolute;
-        top: 56px;
+        top: 80px;
         left: 0;
         background-color: #333;
         font-weight: 0.1rem;
         z-index: 0;
     }
+/*     
     .header{
         line-height:1.5rem ;
-    }
+    } */
 
     .nav-links li {
         margin: 0.2px 0;
@@ -128,7 +129,7 @@ header {
         width: 100%;
         
         position: absolute;
-        top: 55px;
+        top: 78px;
         left: 0;
         background-color:333;
         font-weight: 0.1rem;
@@ -163,28 +164,35 @@ header {
         display: flex;
       
     }
-    .header{
+    /* .header{
         line-height:1.2rem ;
-    }
+    } */
 }
 
+
 .logo img {
-    max-height: 60px; /* Maximum height to keep the logo proportionate */
-    width: auto;      /* Maintain aspect ratio */
+    max-height: 75px; /* Maximum height to keep the logo proportionate */
+    width: 75px;      /* Maintain aspect ratio */
     display: block;   /* Removes inline block spacing */
-    border-radius: 5px;
+    object-fit: cover; /* Ensure the image covers the container */
+    /* border:1px solid purple; */
 }
 
 /* Ensuring the logo scales down on smaller screens */
 @media (max-width: 768px) {
     .logo img {
         max-height: 40px; /* Adjust the height for smaller screens */
+
+        max-height:60px; /* Maximum height to keep the logo proportionate */
+        width: 60px;     
     }
 }
 
 @media (max-width: 480px) {
     .logo img {
         max-height: 35px; /* Further adjustment for very small screens */
+        max-height: 55px; /* Maximum height to keep the logo proportionate */
+        width: 55px;     
     }
 }
 
@@ -193,42 +201,75 @@ header {
 
 
 
-#institute-name1 {
-    font-size: 1.2rem;
+#shrf {
+    text-align: center; /* Center align the text */
+    font-style: italic;
+    color:black;
+    
+  
+}
+
+.title-large {
+    font-size: 1.3rem; /* Smaller text for SCHOLAR'S HOUSE */
     font-weight: bold;
-    color: #fff; /* Initial color */
-    animation: color-cycle 5s infinite linear;
+  
 }
 
-@keyframes color-cycle {
-    0% { color: #ff0000; } /* Red */
-    25% { color: #ffff00; } /* Yellow */
-    50% { color: #00ff00; } /* Green */
-    75% { color: #0000ff; } /* Blue */
-    100% { color: #ff0000; } /* Red */
+.title-medium {
+    font-size: 1rem; /* Smaller text for RESEARCH FOUNDATION */
+    margin: 6px 0;
 }
 
+.title-small {
+    font-size: 0.7rem; /* Smaller text for SINCE 2013 */
+    margin: 3px 0 0 0;
+}
 
-/* For responsiveness */
-
-
-
-
-
-@media (min-width: 768px) {
-    #institute-name1{
+@media (max-width: 1024px) { /* Adjust for tablets */
+    .title-large {
+        font-size: 1.3rem;
+    }
+    .title-medium {
         font-size: 1rem;
     }
-
-
-}
-
-@media (max-width:320px) {
-    #institute-name1,.demo{
-        font-size: 0.8rem;
+    .title-small {
+        font-size: 0.7rem;
     }
 }
 
+@media (max-width: 768px) { /* Adjust for mobile devices */
+    .title-large {
+        font-size: 1.2rem;
+    }
+    .title-medium {
+        font-size: 0.8rem;
+    }
+    .title-small {
+        font-size: 0.6rem;
+    }
+}
+
+  
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    font-style: italic;
+    
+} 
+ 
 
 /* footer */
 
