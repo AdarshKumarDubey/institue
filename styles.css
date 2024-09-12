@@ -11,6 +11,7 @@ body {
 /* slider of images */
 .slider-top{
     background-color:#E0F8E0;
+    margin-top: 5px;
 }
 
 .slider {
@@ -114,169 +115,158 @@ body {
 
 /* Global Styles */
 
-
-
-/* About Section */
-.about-section {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    border: 2px solid #dcdde1; /* Border around the section */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 20px;
-
-    background-color: #2C3E50;
-    background-color: #EDE7F6;
-    background: linear-gradient(to right, #2193b0, #6dd5ed); 
+/* General Styling for Courses Offered Section */
+.about-courses_offered {
+    padding: 50px 20px; /* Increased padding for better spacing */
+    background-color: #e9ecef; /* Slightly darker background for better contrast */
+    color: #333; /* Text color */
+    font-family: 'Arial', sans-serif;
 }
 
-.container {
+/* Container Styling */
+.about-courses_offered .container {
     max-width: 1200px;
-    margin: auto;
-    text-align: center;
-    h1 {
-        color: #34495e;
-        margin-bottom: 20px;
-        font-size: 2.5em;
-        text-decoration: underline;
-    }
-    
-    h2 {
-        color: #27ae60;
-        margin-top: 30px;
-        margin-bottom: 15px;
-        font-size: 1.8em;
-        border-bottom: 2px solid rgb(20, 18, 18); /* Underline effect */
-        display: inline-block;
-        padding-bottom: 5px;
-        color: #2c3e50; /* Dark Navy */
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    }
-    
-   
-
-    /* Styles for Paragraph Text */
-p {
-    color: #3f3a3a; /* Light gray color for readability */
-    font-size: 1.1em; /* Slightly larger font size for readability */
-    line-height: 1.8; /* Increased line height for better spacing */
-    margin-bottom: 20px; /* Spacing below the paragraph */
-    text-align: justify; /* Justify text for clean edges on both sides */
-    padding: 10px 15px; /* Padding inside the paragraph */
-    background-color: rgba(255, 255, 255, 0.1); /* Light background with transparency */
-    border-left: 4px solid #ffffff; /* Left border for a stylistic touch */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center; /* Center text and list items */
 }
 
-/* Hover Effect for Paragraph */
-p:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter background on hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+/* Heading Styling */
+.about-courses_offered h2 {
+    font-size: 30px; /* Increased font size */
+    color: #2c3e50; /* Dark color for headings */
+    margin: 30px 0; /* Increased margin for better spacing */
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Increased letter spacing for emphasis */
+    border-bottom: 1.5px solid #e74c3c; /* Thicker decorative underline */
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
-/* Responsive Adjustments */
+/* List Styling */
+.about-courses_offered .course-list,
+.about-courses_offered .service-list {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 20px auto; /* Center lists */
+    display: grid;
+    gap: 15px; /* Increased gap between items */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minimum width for better alignment */
+    max-width: 1000px; /* Limit list width for better alignment */
+}
+
+/* List Item Styling */
+.about-courses_offered .course-list li,
+.about-courses_offered .service-list li {
+    background-color: #ffffff; /* White background for list items */
+    padding: 20px; /* Increased padding */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600; /* Increased font weight */
+    font-size: 24px; /* Increased font size */
+    color: #444; /* Slightly darker text color for better readability */
+}
+
+/* Hover Effect */
+.about-courses_offered .course-list li:hover,
+.about-courses_offered .service-list li:hover {
+    transform: translateY(-8px); /* Increased hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+    font-weight: 900;
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    p {
-        font-size: 1em; /* Slightly reduce font size for tablets */
-        padding: 8px 12px; /* Reduce padding to accommodate smaller screens */
-        margin-bottom: 15px; /* Adjust margin for better spacing */
+    .about-courses_offered {
+        padding: 40px 15px; /* Adjusted padding */
+    }
+    
+    .about-courses_offered h2 {
+        font-size: 28px; /* Adjusted font size */
+        margin: 25px 0; /* Adjusted margin */
+    }
+
+    .about-courses_offered .course-list li,
+    .about-courses_offered .service-list li {
+        font-size: 18px; /* Adjusted font size */
+        padding: 15px; /* Adjusted padding */
     }
 }
 
 @media (max-width: 480px) {
-    p {
-        font-size: 0.9em; /* Reduce font size further for small screens */
-        padding: 6px 10px; /* Reduce padding further for mobile */
-        margin-bottom: 10px; /* Adjust margin for compact layout */
-        border-left: 3px solid #ffffff; /* Adjust border size */
+    .about-courses_offered {
+        padding: 30px 10px; /* Adjusted padding */
+    }
+
+    .about-courses_offered h2 {
+        font-size: 24px; /* Adjusted font size */
+        margin: 20px 0; /* Adjusted margin */
+    }
+
+    .about-courses_offered .course-list li,
+    .about-courses_offered .service-list li {
+        font-size: 16px; /* Adjusted font size */
+        padding: 12px; /* Adjusted padding */
     }
 }
 
-}
+
+ /* about courses section */
 
 
-
-/* List Styles */
-.course-list,
-.service-list {
-    list-style: none;
-    padding: 0;
+#courses_offer {
     display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 20px;
+    gap: 20px;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    background-color: #40D3DC;
 }
 
-.course-list li,
-.service-list li {
-    background-color: #ecf0f1;
-    color: #2c3e50;
-    padding: 15px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    transition: all 0.3s ease;
-    border: 1px solid transparent; /* Border for hover effect */
-    font-weight: 700;
-    font-size: medium;
+#courses_offer .card {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    min-width: 280px;
+    max-width: 300px;
+    text-align: center;
+    font-weight: bold; /* Makes text bold */
+    font-size: 1.1em; /* Increases font size */
 }
 
-.course-list li:hover,
-.service-list li:hover {
-    background-color: #27ae60; /* Highlight color */
-    color: #ffffff; /* Text color on hover */
-    transform: translateY(-5px); /* Lift up on hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
-    border: 1px solid #27ae60; /* Border changes to highlight color */
-    cursor: pointer;
-    font-weight: 900;
+#courses_offer .card:hover {
+    transform: translateY(-10px);
 }
 
-/* Responsive Design */
+#courses_offer .mission-card {
+    background-color: blue;
+    color: white;
+    font-weight: bold; /* Text bold */
+}
+
+#courses_offer h3 {
+    margin-top: 0;
+    font-size: 1.6em; /* Increases heading font size */
+    text-align: center;
+}
+
+#courses_offer p {
+    font-size: 1.1em; /* Increases paragraph font size */
+    line-height: 1.8; /* Adjusts line height for better readability */
+}
+
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    .course-list li,
-    .service-list li {
-        font-size: 0.9em;
-        padding: 12px 15px;
-    }
-}
-
-@media (max-width: 425px) {
- .container   h1 {
-        font-size: 1.2em;
-    }
-
-    .container h2 {
-        font-size: 0.9em;
-    }
-
-    .course-list,
-    .service-list {
+    #courses_offer {
         flex-direction: column;
         align-items: center;
     }
-
-    .course-list li,
-    .service-list li {
-        font-size: 0.85em;
-        width: 100%;
-        max-width: 250px;
-        text-align: center;
-        padding: 10px 15px;
-    }
 }
-
-
 
 
 
