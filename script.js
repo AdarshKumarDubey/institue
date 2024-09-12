@@ -285,4 +285,38 @@ function toggleFaq(element) {
 }
 
 
+// aboutContent,missionContent,visionContent
+
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutContent = "Scholar House Research Foundation is an esteemed organization dedicated to providing high-quality educational services, including UPSC online classes, UGC NET coaching, and distance education programs. The foundation aims to bridge the gap between aspiring students and their academic goals by offering accessible, affordable, and comprehensive learning solutions.";
+    
+    const missionContent = "To empower students by providing innovative and accessible educational resources, ensuring they are well-prepared for competitive exams such as UPSC and UGC NET. The mission is to support lifelong learners through flexible distance education options, fostering academic excellence and career advancement.";
+    
+    const visionContent = "To become a leading educational hub that facilitates academic success and professional growth. The vision is to create a learning environment that nurtures critical thinking, self-discipline, and knowledge, enabling students to contribute meaningfully to society while achieving their personal aspirations.";
+
+    // Dynamic loading with delay to simulate asynchronous loading
+    setTimeout(() => {
+        document.getElementById("about-content").textContent = aboutContent;
+    }, 500);
+
+    setTimeout(() => {
+        document.getElementById("mission-content").textContent = missionContent;
+    }, 1000);
+
+    setTimeout(() => {
+        document.getElementById("vision-content").textContent = visionContent;
+    }, 1500);
+});
+
+
+
+// Smooth Scroll for Links (if needed)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
