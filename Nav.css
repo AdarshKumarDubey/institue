@@ -16,8 +16,10 @@ header {
     z-index: 1000;
     /* background-color: #333; */
     background-color: rgb(182, 64, 182);
+    /* background-color: #fde994; */
     font-weight: 600;
     /* line-height: 50px; */
+    background-color: #1dad9b;
 
 }
 
@@ -30,6 +32,7 @@ header {
 
 .logo {
     color: #fff;
+    
     font-size: 20px;
     font-weight: bold;
 }

@@ -9,105 +9,60 @@ body {
     
 }
 /* slider of images */
-.slider-top{
-    background-color:#E0F8E0;
-    margin-top: 5px;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Full viewport height */
+    overflow: hidden;
 }
 
 .slider {
-    width: 100%;
-    max-width: 1000px;
-    height: 50vw; /* Makes the slider height responsive */
-    max-height: 500px; /* Sets a max height for large screens */
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-    background-color: red;
-}
-
-.slides {
     display: flex;
-    width: 500%;
+    transition: transform 1s ease-in-out;
     height: 100%;
-    transition: transform 1s ease;
-}
-
-.slides input {
-    display: none;
-}
-
-.slide {
-    width: 20%;
-    transition: opacity 0.6s ease;
-}
-
-.slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
-.navigation-manual {
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.slide-image {
+    min-width: 100%;
+    min-height: 100%;
+    /* object-fit: contain; */
+    background-image: contain;
+     /* Ensure the entire image is visible */
+    transition: opacity 1s ease-in-out;
+    background-color: #4b9aee;
+    background-color: #1dad9b;
+    background: #8ef6e4; 
+    background: #f5e1da; 
+
 }
 
-.manual-btn {
-    border: 2px solid #40D3DC;
-    padding: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.4s;
-}
-
-.manual-btn:hover {
-    background: #40D3DC;
-}
-
-.manual-btn.active {
-    background: #40D3DC;
-}
-
-#radio1:checked ~ .first {
-    margin-left: 0;
-}
-
-#radio2:checked ~ .first {
-    margin-left: -20%;
-}
-
-#radio3:checked ~ .first {
-    margin-left: -40%;
-}
-
-#radio4:checked ~ .first {
-    margin-left: -60%;
-}
-
-#radio5:checked ~ .first {
-    margin-left: -80%;
-}
-
-/* Media Queries for Responsiveness */
+/* Add responsive design for smaller devices */
 @media (max-width: 768px) {
-    .slider {
-        height: 60vw; /* Adjust height for tablets */
+    .slide {
+        height: 60vh; /* Increased height for tablets */
+    }
+    .slide-image {
+        height: 60vh; /* Adjust image height for tablets */
     }
 }
 
 @media (max-width: 480px) {
-    .slider {
-        height: 70vw; /* Adjust height for small screens */
+    .slide {
+        height: 55vh; /* Increased height for mobile devices */
     }
-
-    .manual-btn {
-        padding: 3px; /* Smaller dots for smaller screens */
+    .slide-image {
+        height: 55vh; /* Adjust image height for mobile devices */
     }
 }
+
 
 
 
@@ -223,13 +178,16 @@ body {
     gap: 20px;
     flex-wrap: wrap;
     background-color: #40D3DC;
+    background: #e6a4b4; 
+    background: #bef2ff; 
+
+
 }
 
 #courses_offer .card {
     flex: 1;
     padding: 20px;
     background-color: white;
-    color: black;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -238,6 +196,8 @@ body {
     text-align: center;
     font-weight: bold; /* Makes text bold */
     font-size: 1.1em; /* Increases font size */
+    color: #333333;
+
 }
 
 #courses_offer .card:hover {
@@ -245,9 +205,12 @@ body {
 }
 
 #courses_offer .mission-card {
-    background-color: blue;
-    color: white;
+    /* background-color: rgb(41, 41, 236); */
+    background-color: #8ed6ff;
+    color:white;
     font-weight: bold; /* Text bold */
+    background-color: #ea9085;
+    background-color: #002f35;
 }
 
 #courses_offer h3 {
@@ -348,7 +311,7 @@ body {
 }
 
 #success-stories h2 {
-    font-size: 2em;
+    font-size: 2.2em;
     margin-bottom: 20px;
 }
 
@@ -368,6 +331,13 @@ body {
     text-align: center;
     padding: 20px;
     transition: transform 0.3s ease-in-out;
+    
+    
+    p{
+        font-size: 1rem;
+        line-height:1.6rem;
+    }
+
 }
 
 .story:hover {
@@ -480,6 +450,7 @@ header h1 {
 
 .faculty-card h2 {
     background: #007bff;
+    background-color:  #8971d0 ;
     color: #fff;
     padding: 0.5rem;
     text-align: center;
@@ -488,7 +459,11 @@ header h1 {
 .faculty-card p {
     padding: 1rem;
     text-align: justify;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.9rem;
+    font-weight:lighter
+    
+    
 }
 
 /* Responsive adjustments */
@@ -520,7 +495,8 @@ header h1 {
     color: #4b9aee; /* Darker grey-blue for the introductory text */
     max-width: 600px;
     margin: 0 auto 40px;
-    font-size: 1.1em;
+    font-size: 1.3em;
+    font-weight: lighter;
 }
 
 .cards {
@@ -888,29 +864,4 @@ footer {
 #whatsapp-icon:hover, #call-icon:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    #fixed-icons {
-        top: 240px;
-        padding: 0 10px;
-    }
-
-    #whatsapp-icon, #call-icon {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    #fixed-icons {
-        top: 185px;
-        padding: 0 8px;
-    }
-
-    #whatsapp-icon, #call-icon {
-        width: 38px;
-        height: 38px;
-    }
 }

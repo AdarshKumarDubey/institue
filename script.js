@@ -4,33 +4,24 @@ document.querySelector('.hamburger').addEventListener('click', () => {
 
 
 // slider image code 
-let counter = 1;
-let manualBtns = document.querySelectorAll('.manual-btn');
 
-// Function to update the active button
-function updateActiveButton(index) {
-    manualBtns.forEach((btn, i) => {
-        btn.classList.toggle('active', i === index);
-    });
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.querySelector(".slider");
+    const images = document.querySelectorAll(".slide-image");
+    let currentIndex = 0;
+    const imageCount = images.length;
 
-// Auto slide every 4 seconds
-setInterval(function(){
-    document.getElementById('radio' + counter).checked = true;
-    updateActiveButton(counter - 1);
-    counter++;
-    if(counter > 5){
-        counter = 1;
+    function showNextImage() {
+        images[currentIndex].style.opacity = 0; // Fade out current image
+        currentIndex = (currentIndex + 1) % imageCount;
+        images[currentIndex].style.opacity = 1; // Fade in next image
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
-}, 4000);
 
-// Add click event listeners to manual buttons
-manualBtns.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        document.getElementById('radio' + (index + 1)).checked = true;
-        updateActiveButton(index);
-        counter = index + 1; // Reset counter to clicked slide
-    });
+    setInterval(showNextImage, 2000); // Change image every 2 seconds
+
+    // Initially set the first image to be visible
+    images[currentIndex].style.opacity = 1;
 });
 
 
@@ -323,7 +314,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
-// Function to simulate dynamic loading of content
+
+
+// Function to simulate dynamic loading of content free demo
 document.addEventListener("DOMContentLoaded", () => {
     const section = document.getElementById('free_demo');
     setTimeout(() => {
@@ -335,6 +328,4 @@ document.addEventListener("DOMContentLoaded", () => {
 function bookFreeDemo() {
     alert('Thank you for your interest! A representative will contact you shortly to schedule your free demo class.');
 }
-
-
 

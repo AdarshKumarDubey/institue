@@ -4,7 +4,8 @@
 /* Team Overview Section */
 #team_overview {
     padding: 60px 20px;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background: linear-gradient(to right, #9981b3, #819ed1);
+/* background-color: purple;     */
     color: #fff;
     text-align: center;
 }

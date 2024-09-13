@@ -7,7 +7,8 @@
 
 }
 body{
-    background: linear-gradient(135deg, #ec97a5, #ffabce, #65c7f7, #708cb9);
+    /* background: linear-gradient(135deg, #ec97a5, #ffabce, #65c7f7, #708cb9); */
+    background-color: #ffe8cf;
 
 }
 
@@ -373,8 +374,9 @@ button:hover {
 
 .testimonial-quote {
     padding: 15px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #555;
+    line-height: 1.5rem;
 }
 
 /* Media query for tablets */
@@ -417,12 +419,13 @@ button:hover {
 #qualities {
     padding: 50px 20px;
     text-align: center;
-    background: linear-gradient(to right, #0066cc, #00ccff);
+    /* background: linear-gradient(to right, #0066cc, #00ccff); */
+    background-color: #b28ae7;
     color: #fff;
 }
 
 #qualities h2 {
-    font-size: 2.5em;
+    font-size: 2.6em;
     margin-bottom: 20px;
     color: #fff;
     animation: fadeInDown 1s ease-in-out;
@@ -458,11 +461,12 @@ button:hover {
     margin-top: 0;
     font-size: 1.5em;
     color: #0066cc;
+    margin:8px;
 }
 
 .quality p {
     font-size: 1em;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* Media Queries for Responsiveness */
@@ -649,19 +653,11 @@ button[type="submit"]:hover {
 
 
 
-/* General styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
-    color: #333;
-}
-
 /* Free Demo Section */
 #free_demo {
     padding: 50px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #003366, #009999);
+    background: linear-gradient(135deg, #4c93db, #009999);
     color: white;
     animation: fadeIn 1.5s ease-in-out forwards;
     opacity: 0; /* Initially hidden for dynamic loading */
