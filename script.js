@@ -320,3 +320,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+
+
+
+// Function to simulate dynamic loading of content
+document.addEventListener("DOMContentLoaded", () => {
+    const section = document.getElementById('free_demo');
+    setTimeout(() => {
+        section.style.opacity = 1; // Make the section visible after loading
+    }, 500); // Adjust timing as needed
+});
+
+// Function to handle the booking of the free demo
+function bookFreeDemo() {
+    alert('Thank you for your interest! A representative will contact you shortly to schedule your free demo class.');
+}
+
+
+
