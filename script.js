@@ -329,3 +329,23 @@ function bookFreeDemo() {
     alert('Thank you for your interest! A representative will contact you shortly to schedule your free demo class.');
 }
 
+
+//our achivements
+
+document.addEventListener("DOMContentLoaded", function() {
+    const achievementSection = document.getElementById("achievements_section");
+    achievementSection.style.opacity = 0;
+    achievementSection.style.transition = "opacity 1.5s ease-in-out, transform 1.5s ease-in-out";
+    
+    // Scroll-based loading effect
+    window.addEventListener("scroll", function() {
+        const sectionTop = achievementSection.getBoundingClientRect().top;
+        const triggerHeight = window.innerHeight / 1.2;
+
+        if (sectionTop < triggerHeight) {
+            achievementSection.style.opacity = 1;
+            achievementSection.style.transform = "translateY(0)";
+        }
+    });
+});
+
