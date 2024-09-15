@@ -349,3 +349,57 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+
+
+
+
+
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    var formData = new FormData(this);
+
+    // Create a structured message
+    var messageBody = `
+        Name: ${formData.get('name')}\n
+        Email: ${formData.get('email')}\n
+        Phone: ${formData.get('phone')}\n
+        Message: ${formData.get('message')}
+    `;
+
+    // Prepare the data to be sent in a structured format
+    var dataToSend = new FormData();
+    dataToSend.append('name', formData.get('name'));
+    dataToSend.append('email', formData.get('email'));
+    dataToSend.append('phone', formData.get('phone'));
+    dataToSend.append('message', messageBody);  // Use the structured message as the value for 'message'
+
+    fetch(this.action, {
+        method: this.method,
+        body: dataToSend,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(function(response) {
+        console.log(response); // Log the response for inspection
+
+        if (response.ok) {
+            // Success: Show success message and reset the form
+            document.getElementById('formMessage').style.display = 'block';
+            document.getElementById('contactForm').reset();
+        } else {
+            // Handle cases where the response isn't ok
+            response.json().then(function(data) {
+                console.log(data); // Log the response data
+                alert("Oops! There was a problem submitting your form: " + (data.error || "Unknown error"));
+            });
+        }
+    }).catch(function(error) {
+        console.error('Error:', error);
+        alert("Oops! There was a network problem submitting your form.");
+    });
+});
+
+
